@@ -24,12 +24,4 @@ public class Directory {
     public void delete(File file) {
         files.remove(file);
     }
-
-    @Override
-    public String toString() {
-        return "Directory{" +
-                "files=" + files +
-                '}';
-    }
-
 }
