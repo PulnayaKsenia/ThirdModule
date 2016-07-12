@@ -7,12 +7,14 @@ public class File {
     public File(String name, Directory directory) {
         this.name = name;
         this.directory = directory;
-        directory.add(this);
-        directory.delete(this);
+        directory.add(new AudioFile(name, directory));
+        directory.add(new ImageFile(name, directory));
+        directory.add(new TextFile(name, directory));
+        directory.delete(new ImageFile(name, directory));
     }
 
     @Override
     public String toString() {
-        return "File " + name + "located in the directory " + directory;
+        return "File " + name + " located in the directory " + directory;
     }
 }
