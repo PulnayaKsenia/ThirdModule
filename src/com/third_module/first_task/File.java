@@ -7,10 +7,6 @@ public class File {
     public File(String name, Directory directory) {
         this.name = name;
         this.directory = directory;
-        directory.add(new AudioFile(name, directory));
-        directory.add(new ImageFile(name, directory));
-        directory.add(new TextFile(name, directory));
-        directory.delete(new ImageFile(name, directory));
     }
 
     @Override
